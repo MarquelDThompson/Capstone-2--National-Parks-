@@ -1,5 +1,5 @@
 
-//function that searches Parks type and location
+//function that searches Parks via State location
 
 
 function parksDropDownSelect(){
@@ -20,11 +20,8 @@ function parksDropDownSelect(){
     
     }
 
-    // 1. Rename new `loadData()` to something like `loadStatesDropdown()`
-    // 2. Add a new <select> for the states dropdown on your HTML. Give it an ID, something like "statesDropDown"
-    // 3. Change the reference to "parkDropDown" in your new function to reference your new dropdown
     
-    //choosing the state  
+    //Choose from any National parks , not in use yet 
     function loadStatesDropDown() {
         var down = document.getElementById('statesDropDown');
                for (let i = 0; i < locationsArray.length; i++) {
@@ -38,7 +35,7 @@ function parksDropDownSelect(){
           
            loadStatesDropDown()
 
-
+// Displays all National Parks available to choose in dropdown
     function loadData() {
         var down = document.getElementById('parksDropDown');
                for (let i = 0; i < nationalParksArray.length; i++) {
@@ -52,6 +49,8 @@ function parksDropDownSelect(){
           
            loadData()
 
+
+           //create function to return values from selected park
            function nationalParkTemplate(park) {
             return `
               <div class="park">
